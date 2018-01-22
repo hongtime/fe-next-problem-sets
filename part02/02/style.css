@@ -1,0 +1,44 @@
+/*
+* 题目要求：
+* 1、小图标的宽高皆为“18px”，右外边距为“10px”
+* 2、已完成状态的背景定位
+* 3、已完成的文本装饰值为“line-through”（删除线效果）
+*/
+
+ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.todo-list .todo-item {
+    padding: 5px 0;
+}
+
+.todo-list .todo-item .icon-todo,
+.todo-list .todo-item .item-tt {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.todo-list .todo-item .icon-todo {
+    background: url('http://coding.imweb.io/img/p2/icon-todo.png') no-repeat;
+    /* 设置宽高大小，右边距及背景 */
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.todo-list .todo-item:not(.item--done):hover .icon-todo {
+    background-position: 0 -20px;
+}
+
+.todo-list .item--done .icon-todo {
+    /* 设置已完成的背景定位 */
+    background-position: 0 -40px;
+}
+
+.todo-list .item--done .item-tt {
+    /* 设置文本装饰 text-decoration */
+    text-decoration: line-through;
+}
