@@ -21,8 +21,7 @@
 .tour-item .tour-img-wrap {
     /* 设置内容超过隐藏，左上角和右上角圆角及下边距 */
     overflow: hidden;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-radius: 5px 5px 0 0;
     margin-bottom: 5px;
 }
 
@@ -42,6 +41,9 @@
     /* 设置行高，文字大小，文字超过省略号显示 */
     line-height: 30px;
     font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .tour-item .item-tt:hover {
